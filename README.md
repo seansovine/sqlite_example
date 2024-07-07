@@ -11,17 +11,28 @@ applications that build cross-platform, where the source comes with its
 own specific version of SQLite, so the project can have more self-contained
 dependencies.
 
+You can clone, build, and run it with commands:
+
+```shell
+git clone git@github.com:seansovine/sqlite_example.git
+git submodule update --init --recursive
+mkdir build && cd build
+cmake -G "Ninja" ..
+ninja
+./example
+```
+
 ## Example Program
 
 We found a simple example program for using sqlite in C++
 [here](https://gist.github.com/enile8/2424514),
-and modified it a bit to match our personal C++ coding style preferences.
+and modified it a bit to match our personal C++ habits.
 We have CMake build this program as an executable and link in the static
-library built by `ExternalProject`. This step is also Linux specific as 
+library built by `ExternalProject_Add`. This step is currently Linux specific as 
 it's implemented in the CMake file. See the [BuildNotes](BuildNotes.md)
-file for comments on making this more portable.
+file for comments on making things more portable.
 
-## Next:
+## To Do:
 
 We want to have CMake generate an include file with the project root directory 
 as a static variable. Then we can use that to have the example program manage 
