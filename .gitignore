@@ -1,6 +1,7 @@
 .vscode
 .idea
 build/
+build_test/
 sqlite-build/
 cmake-build-debug/
 
