@@ -1,4 +1,8 @@
 .vscode
 .idea
 build/
+sqlite-build/
 cmake-build-debug/
+
+# Don't commit databases created by test programs.
+*.db
