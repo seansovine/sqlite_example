@@ -35,7 +35,7 @@ int main() {
     "select * from myTable",
     "delete from myTable",
     "drop table myTable"
-	};
+  };
   // clang-format on
 
   // Execute SQL statements.
